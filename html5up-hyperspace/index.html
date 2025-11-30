@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Portfolio - Mathis Bert</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+    /* Fond du portfolio en bleu foncé comme en haut */
+    #two.wrapper.style3 {
+        background-color: #0b3d91; /* bleu foncé similaire au header */
+        color: #ffffff; /* texte blanc pour contraste */
+    }
+
+    /* Réduire les images des projets Excel/Canva/GIMP */
+    #two .features section a.image img {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    /* Centrer les images réduites */
+    #two .features section a.image {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    /* Changer la couleur des titres et paragraphes pour mieux contraster */
+    #two h2, #two h3, #two p {
+        color: #ffffff;
+    }
+
+    /* Lightbox (agrandir image au clic) */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img,
+    .lightbox video {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    </style>
+
+</head>
+<body class="is-preload">
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#intro">Accueil</a></li>
+                    <li><a href="#one">Compétences</a></li>
+                    <li><a href="#two">Portfolio</a></li>
+                    <li><a href="#three">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Intro -->
+<section id="intro" class="wrapper style1 fullscreen fade-up">
+    <div class="inner">
+        <h1>Mathis Bert</h1>
+
+        <p>
+            Bonjour, je m'appelle <strong>Mathis Bert</strong>.  
+            Je suis né dans le beau département de <strong>l'Ardèche</strong>, à <strong>Aubenas</strong>.  
+            Actuellement étudiant en <strong>BUT2 Techniques de Commercialisation</strong> option <strong>MDEE</strong> à l’IUT de Montpellier, 
+            j’ai pu acquérir des compétences solides en <strong>marketing</strong>, <strong>vente</strong> et <strong>communication</strong>.  
+            Mon projet professionnel est d’évoluer plus tard dans le <strong>domaine sportif</strong> ou <strong>musical</strong>.
+        </p>
+
+        <div style="margin-top:20px; text-align:center;">
+            <img src="images/moi.jpg" alt="Photo de Mathis Bert" 
+                 style="width:250px; border-radius:10px; object-fit:cover;">
+        </div>
+
+        <!-- >>> VIDÉO JUSTE EN DESSOUS DE LA PRÉSENTATION <<< -->
+        <div style="margin-top:20px; text-align:center;">
+    <video 
+        src="images/vidéo1.mp4" 
+        autoplay 
+        muted 
+        playsinline 
+        style="width:600px; max-width:90%; border-radius:10px; object-fit:cover;">
+    </video>
+</div>
+
+        <!-- FIN BLOC VIDÉO -->
+
+        <ul class="actions" style="margin-top:30px;">
+            <li><a href="#one" class="button scrolly">Mes Compétences</a></li>
+        </ul>
+    </div>
+</section>
+
+
+        <!-- One: Compétences -->
+        <section id="one" class="wrapper style2 spotlights">
+
+            <!-- CV -->
+            <section>
+                <a class="image">
+                    <img src="images/cascade.jpg" alt="Aperçu CV" data-position="center center" />
+                </a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Mon CV</h2>
+                        <p>Voici mon CV.</p>
+                        <ul class="actions">
+                            <li><a href="docs/CV.pdf" class="button" target="_blank">Voir le CV</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lettre de motivation -->
+            <section>
+                <a class="image">
+                    <img src="images/avion.jpg" alt="Aperçu Lettre de Motivation" data-position="center center" />
+                </a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Ma Lettre de Motivation</h2>
+                        <p>Voici ma lettre de motivation.</p>
+                        <ul class="actions">
+                            <li><a href="docs/LM.pdf" class="button" target="_blank">Voir la Lettre de Motivation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Two: Portfolio -->
+        <section id="two" class="wrapper style3 fade-up">
+            <div class="inner">
+                <h2>Portfolio</h2>
+                <p>Voici différents travaux et projets réalisés durant mes études et activités personnelles.</p>
+
+                <div class="features">
+
+                    <!-- Excel -->
+                    <section>
+                        <a class="image">
+                            <img src="images/exel.jpg" alt="Projet Excel" data-position="center center" />
+                        </a>
+                        <h3>Excel</h3>
+                        <p>Analyse, tableaux et automatisations réalisés avec Excel.</p>
+                        <div class="images">
+                            <img src="images/exel1.png" alt="exel1" style="width:150px; border-radius:10px; margin:5px; cursor:pointer;" onclick="openLightbox(this.src)">
+                            <img src="images/exel2.png" alt="exel2" style="width:150px; border-radius:10px; margin:5px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        </div>
+                    </section>
+
+                    <!-- Canva -->
+                    <section>
+                        <a class="image">
+                            <img src="images/canva.png" alt="Projet Canva" data-position="center center" />
+                        </a>
+                        <h3>Canva</h3>
+                        <p>Créations graphiques et montages réalisés avec Canva.</p>
+                        <div class="images">
+                            <img src="images/canva1.png" alt="canva1" style="width:150px; border-radius:10px; margin:5px; cursor:pointer;" onclick="openLightbox(this.src)">
+                            <img src="images/canva2.jpg" alt="canva2" style="width:150px; border-radius:10px; margin:5px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        </div>
+                    </section>
+
+               
+               
+
+                    <!-- SAE -->
+                    <section>
+                        <span class="icon solid major fa-tasks"></span>
+                        <h3>Actions de SAE</h3>
+                        <p>Voici quelques que photo de mes SAE </p>
+                    </section>
+                    <div class="images">
+                        <img src="images/SAE1.png" alt="SAE1"
+                             style="width:150px; border-radius:10px; margin:5px; cursor:pointer;"
+                             onclick="openLightbox(this.src)">
+                    </div>
+
+                    <!-- Stages -->
+                    <section>
+                        <span class="icon solid major fa-briefcase"></span>
+                        <h3>Stages</h3>
+                        <p>Voici quelque photo de mon stage chez Eyes Up, ou j'ai eu l'opportunité de très bien m'integrer dans l'équipe</p>
+                    </section>
+                    <div class="images">
+                        <img src="images/stage1.jpg" alt="stage1"
+                             style="width:150px; border-radius:10px; margin:5px; cursor:pointer;"
+                             onclick="openLightbox(this.src)">
+                             
+                        <img src="images/stage2.jpg" alt="stage2"
+                             style="width:150px; border-radius:10px; margin:5px; cursor:pointer;"
+                             onclick="openLightbox(this.src)">
+                             
+                        <img src="images/stage3.jpg" alt="stage3"
+                             style="width:150px; border-radius:10px; margin:5px; cursor:pointer;"
+                             onclick="openLightbox(this.src)">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Three: Contact -->
+        <section id="three" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Contact</h2>
+                <p>N’hésitez pas à me contacter via mes réseaux ou directement par mail/téléphone.</p>
+
+                <div class="split style1">
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Email</h3>
+                                <a href="mailto:mathisbt08@gmail.com">mathisbt08@gmail.com</a>
+                            </li>
+                            <li>
+                                <h3>Téléphone</h3>
+                                <span>06 80 75 41 84</span>
+                            </li>
+                            <li>
+                                <h3>Instagram</h3>
+                                <a href="https://instagram.com/mathis_0702">@mathis_0702</a>
+                            </li>
+                            <li>
+                                <h3>Google Maps</h3>
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.239609095911!2d3.858!3d43.631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6afdd1bb7c3d7%3A0xd87a235b73d7e0a4!2sIUT%20de%20Montpellier!5e0!3m2!1sfr!2sfr!4v0000000000" 
+                                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Mathis Bert. Tous droits réservés.</li>
+                <li>Design: HTML5 UP</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+    function openLightbox(src) {
+        // Affichage d'une image dans la lightbox
+        const lightbox = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+        const video = document.getElementById("lightbox-video");
+
+        // On cache la vidéo, on montre l'image
+        if (video) {
+            video.pause();
+            video.style.display = "none";
+        }
+        if (img) {
+            img.style.display = "block";
+            img.src = src;
+        }
+
+        lightbox.style.display = "flex";
+    }
+
+    function openVideo(src) {
+        // Affichage de la vidéo dans la lightbox
+        const lightbox = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+        const video = document.getElementById("lightbox-video");
+
+        if (img) {
+            img.style.display = "none";
+        }
+        if (video) {
+            video.style.display = "block";
+            video.src = src;
+            video.currentTime = 0;
+        }
+
+        lightbox.style.display = "flex";
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById("lightbox");
+        const video = document.getElementById("lightbox-video");
+
+        if (video) {
+            video.pause();
+        }
+        lightbox.style.display = "none";
+    }
+    </script>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+        <video id="lightbox-video" controls style="display:none;"></video>
+    </div>
+
+</body>
+</html>
